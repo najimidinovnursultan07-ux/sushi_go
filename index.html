@@ -641,7 +641,7 @@
                 yandexBtn.style.display = 'none';
             }
         }
-       function openYandexDelivery() {
+    function openYandexDelivery() {
             const address = document.getElementById('client-address').value;
             const storeAddress = 'Байтик Баатыр 44'; // Дүкөндүн дареги
 
@@ -651,10 +651,16 @@
                 return;
             }
 
-            // Яндекс Доставканын курьердик тарифке багыттоочу шилтемеси
-            const yandexUrl = `https://dostavka.yandex.ru/client?from=${encodeURIComponent(storeAddress)}&to=${encodeURIComponent(address)}&tariff=courier`;
-            
-            window.open(yandexUrl, '_blank');
+            // Дүкөндүн жана кардардын дарегин даярдоо
+            const deliveryText = `Кайдан: ${storeAddress}\nКайда: ${address}`;
+
+            // Даректерди автоматтык түрдө көчүрүп алуу
+            navigator.clipboard.writeText(deliveryText).then(() => {
+                alert('Даректер көчүрүлдү! Эми Yandex Go тиркемесин ачып, "Куда" деген жерге чаптаңыз (вставить кылыңыз).');
+            });
+
+            // Yandex Go расмий веб-сайтын же тиркеме шилтемесин ачуу
+            window.open('https://go.yandex/', '_blank');
         }
         function checkoutWhatsApp(event) {
             event.preventDefault();
