@@ -7,7 +7,7 @@
     <title id="page-title">Суши — Даамдуу жеткирүү</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Кооз курсив / жазуу түрүндөгү шрифт үчүн -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -32,44 +32,48 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
-    <!-- ХЕДЕР -->
+    <!-- ХЕДЕР (Толук оңдолгон адаптивдүү вариант) -->
     <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex justify-between items-center gap-2">
-            <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
-                <!-- Логотип -->
-                <a href="#" class="flex items-center space-x-2 group">
-                    <div
-                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center shadow-md shadow-red-500/20 group-hover:scale-105 transition shrink-0">
-                        <span class="text-lg sm:text-xl">🍣</span>
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 py-2.5 flex justify-between items-center gap-1 sm:gap-4">
+            
+            <!-- Логотип -->
+            <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
+                <a href="#" class="flex items-center space-x-1.5 sm:space-x-2 group">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center shadow-md shadow-red-500/20 group-hover:scale-105 transition shrink-0">
+                        <span class="text-base sm:text-xl">🍣</span>
                     </div>
-                    <span class="text-xl sm:text-2xl font-black tracking-tight sushi-logo-text">
-                        <span class="text-red-600">С</span><span class="text-red-600">у</span><span
-                            class="text-brandBlue">ш</span><span class="text-brandBlue">и</span>
+                    <span class="text-lg sm:text-2xl font-black tracking-tight sushi-logo-text">
+                        <span class="text-red-600">С</span><span class="text-red-600">у</span><span class="text-brandBlue">ш</span><span class="text-brandBlue">и</span>
                     </span>
                 </a>
             </div>
-            <div class="flex items-center space-x-2 sm:space-x-4">
+
+            <!-- Оң тараптагы башкаруу элементтери (Тил жана Корзина) -->
+            <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
                 <!-- ТИЛ КОТОРГУЧ -->
-                <div class="flex bg-slate-100 p-0.5 sm:p-1 rounded-xl border border-slate-200 shrink-0">
+                <div class="flex bg-slate-100 p-0.5 rounded-lg sm:rounded-xl border border-slate-200 shrink-0">
                     <button onclick="setLanguage('kg')" id="lang-kg"
-                        class="px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg bg-brandBlue text-white transition">KG</button>
+                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg bg-brandBlue text-white transition">KG</button>
                     <button onclick="setLanguage('ru')" id="lang-ru"
-                        class="px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg text-slate-700 hover:text-slate-900 transition">RU</button>
+                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg text-slate-700 hover:text-slate-900 transition">RU</button>
                     <button onclick="setLanguage('en')" id="lang-en"
-                        class="px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg text-slate-700 hover:text-slate-900 transition">EN</button>
+                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg text-slate-700 hover:text-slate-900 transition">EN</button>
                 </div>
 
                 <a href="tel:+996507079796"
-                    class="text-brandBlue font-semibold hidden md:flex items-center space-x-1 hover:underline shrink-0">
+                    class="text-brandBlue font-semibold hidden md:flex items-center space-x-1 hover:underline shrink-0 text-sm">
                     <span>📞 +996 (507) 079-796</span>
                 </a>
+
+                <!-- КОРЗИНА БАСКЫЧЫ -->
                 <button onclick="toggleCart()"
-                    class="bg-brandBlue text-white px-3 sm:px-5 py-2 rounded-xl font-medium flex items-center space-x-1.5 sm:space-x-2 shadow hover:bg-blue-700 transition shrink-0 text-xs sm:text-sm">
-                    <span id="cart-btn-text">🛒 Корзина</span>
+                    class="bg-brandBlue text-white px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-xl font-medium flex items-center space-x-1 shadow hover:bg-blue-700 transition shrink-0 text-xs sm:text-sm">
+                    <span id="cart-btn-text">🛒 <span class="hidden xs:inline">Корзина</span></span>
                     <span id="cart-count"
-                        class="bg-brandRed text-white text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full font-bold">0</span>
+                        class="bg-brandRed text-white text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
             </div>
+
         </div>
     </header>
 
@@ -92,7 +96,7 @@
             <h1 id="banner-title"
                 class="text-2xl sm:text-4xl md:text-6xl font-black mb-4 drop-shadow-md tracking-tight px-2">Жапон даамы эшигиңиздин алдында</h1>
             <p id="banner-desc"
-                class="text-sm sm:text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow px-2">Эң жаңы ингредиенттерден даярдалган роллы жана сушилер. Тез жана ыңгайлуу заказ кылыңыз!</p>
+                class="text-xs sm:text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow px-2">Эң жаңы ингредиенттерден даярдалган роллы жана сушилер. Тез жана ыңгайлуу заказ кылыңыз!</p>
             <a href="#catalog" id="banner-btn"
                 class="bg-brandRed text-white px-6 sm:px-8 py-3.5 rounded-xl font-bold text-sm sm:text-lg shadow-xl hover:bg-red-700 transition inline-block">Менюну көрүү</a>
         </div>
@@ -110,9 +114,7 @@
                     class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-brandBlue shadow-sm">
             </div>
 
-            <!-- Категориялар: Мобилдик үчүн SELECT, чоң экрандар үчүн Кнопкалар -->
             <div class="w-full md:w-auto">
-                <!-- Мобилдик үчүн Select -->
                 <select id="category-select" onchange="filterCategorySelect(this.value)"
                     class="block md:hidden w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue shadow-sm text-slate-700 font-medium">
                     <option value="all" id="opt-cat-all">Баары</option>
@@ -122,7 +124,6 @@
                     <option value="напитки" id="opt-cat-drinks">Напитки</option>
                 </select>
 
-                <!-- Компьютер үчүн Баскычтар -->
                 <div class="hidden md:flex flex-wrap gap-2 justify-center" id="category-buttons">
                     <button onclick="filterCategory('all')" id="cat-all"
                         class="cat-btn bg-brandBlue text-white px-4 py-2 rounded-xl font-medium text-sm transition shadow-sm">Баары</button>
@@ -137,7 +138,6 @@
                 </div>
             </div>
 
-            <!-- Сорттоо -->
             <div class="w-full md:w-auto">
                 <select id="sort-select" onchange="filterProducts()"
                     class="w-full md:w-auto bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-brandBlue shadow-sm text-slate-700">
@@ -148,7 +148,7 @@
             </div>
         </div>
 
-        <!-- ТОВАРДАР ТИЗМЕСИ (Мобилдик үчүн 1 колонна, чоңдорго көп) -->
+        <!-- ТОВАРДАР ТИЗМЕСИ -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="product-grid"></div>
     </main>
 
@@ -169,7 +169,6 @@
                 <p class="text-slate-400 text-sm mb-1">📞 Телефон: +996 (507) 079-796</p>
                 <p id="footer-address" class="text-slate-400 text-sm mb-3">📍 Дарек: Байтик Баатыр 44</p>
 
-                <!-- Социалдык тармактардын логотиптери (SVG) -->
                 <div class="flex items-center space-x-3 mt-2">
                     <a href="https://instagram.com" target="_blank"
                         class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-brandRed transition text-white shadow-sm"
@@ -225,7 +224,6 @@
                 <span id="cart-total" class="text-brandRed">0 сом</span>
             </div>
 
-            <!-- БУЙРУТМА ФОРМАСЫ -->
             <form id="order-form" onsubmit="checkoutWhatsApp(event)" class="space-y-3 sm:space-y-4">
                 <div>
                     <label id="label-delivery-type" class="block text-sm font-medium text-slate-700 mb-1">Алуу ыкмасы:</label>
@@ -271,7 +269,6 @@
                         <span>💬 WhatsApp аркылуу заказ кылуу</span>
                     </button>
 
-                    <!-- Яндекс аркылуу жеткирүү баскычы -->
                     <button type="button" onclick="openYandexDelivery()" id="btn-yandex"
                         class="w-full bg-yellow-400 text-slate-900 py-3 rounded-xl font-bold text-sm sm:text-base hover:bg-yellow-500 transition shadow-sm flex items-center justify-center space-x-2">
                         <span>🚕 Яндекс Доставка менен текшерүү / чакыруу</span>
@@ -286,7 +283,7 @@
         const translations = {
             kg: {
                 pageTitle: "Суши — Даамдуу жеткирүү",
-                cartBtn: "🛒 Корзина",
+                cartBtn: "Корзина",
                 bannerTitle: "Жапон даамы эшигиңиздин алдында",
                 bannerDesc: "Эң жаңы ингредиенттерден даярдалган роллы жана сушилер. Тез жана ыңгайлуу заказ кылыңыз!",
                 bannerBtn: "Менюну көрүү",
@@ -321,7 +318,7 @@
             },
             ru: {
                 pageTitle: "Суши — Вкусная доставка",
-                cartBtn: "🛒 Корзина",
+                cartBtn: "Корзина",
                 bannerTitle: "Японский вкус у вашей двери",
                 bannerDesc: "Роллы и суши из самых свежих ингредиентов. Заказывайте быстро и удобно!",
                 bannerBtn: "Смотреть меню",
@@ -356,7 +353,7 @@
             },
             en: {
                 pageTitle: "Sushi — Delicious Delivery",
-                cartBtn: "🛒 Cart",
+                cartBtn: "Cart",
                 bannerTitle: "Japanese taste at your door",
                 bannerDesc: "Rolls and sushi made from the freshest ingredients. Order quickly and conveniently!",
                 bannerBtn: "View Menu",
@@ -408,7 +405,7 @@
 
             const t = translations[lang];
             document.getElementById('page-title').innerText = t.pageTitle;
-            document.getElementById('cart-btn-text').innerText = t.cartBtn;
+            document.getElementById('cart-btn-text').innerHTML = `🛒 <span class="hidden xs:inline">${t.cartBtn}</span>`;
             document.getElementById('banner-title').innerText = t.bannerTitle;
             document.getElementById('banner-desc').innerText = t.bannerDesc;
             document.getElementById('banner-btn').innerText = t.bannerBtn;
@@ -456,7 +453,6 @@
             updateCartUI();
         }
 
-        // Баннер слайдери
         let currentSlide = 0;
         const slides = document.querySelectorAll('#hero-slider > div:not(:last-child)');
         function changeSlide() {
@@ -468,7 +464,6 @@
         }
         setInterval(changeSlide, 4000);
 
-        // Продукциялар
         const products = [
             { id: 1, name: { kg: 'Филадельфия Классик', ru: 'Филадельфия Классик', en: 'Philadelphia Classic' }, category: 'роллы', price: 450, desc: { kg: 'Лосось, сливочный сыр, авокадо, рис, нори.', ru: 'Лосось, сливочный сыр, авокадо, рис, нори.', en: 'Salmon, cream cheese, avocado, rice, nori.' }, img: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=600&q=80' },
             { id: 2, name: { kg: 'Калифорния с крабом', ru: 'Калифорния с крабом', en: 'California with Crab' }, category: 'роллы', price: 380, desc: { kg: 'Краб-микс, авокадо, огурец, тобико.', ru: 'Краб-микс, авокадо, огурец, тобико.', en: 'Crab mix, avocado, cucumber, tobiko.' }, img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80' },
@@ -634,7 +629,7 @@
 
         function openYandexDelivery() {
             const address = document.getElementById('client-address').value;
-            const storeAddress = 'Байтик Баатыр 44'; // Дүкөндүн дареги
+            const storeAddress = 'Байтик Баатыр 44';
 
             if (!address) {
                 alert('Сураныч, жеткирүү дарегин жазыңыз!');
@@ -645,7 +640,7 @@
             const deliveryText = `Кайдан: ${storeAddress}\nКайда: ${address}`;
 
             navigator.clipboard.writeText(deliveryText).then(() => {
-                alert('Даректер көчүрүлдү! Эми Yandex Go тиркемесин ачып, "Куда" деген жерге чаптаңыз (вставить кылыңыз).');
+                alert('Даректер көчүрүлдү! Эми Yandex Go тиркемесин ачып, "Куда" деген жерге чаптаңыз.');
             });
 
             window.open('https://go.yandex/', '_blank');
@@ -655,7 +650,7 @@
             event.preventDefault();
 
             if (cart.length === 0) {
-                alert('Буйрутма берүү үчүн себетке товар кошуңуз!');
+                alert('Буйрутма берүү үшін себетке товар кошуңуз!');
                 return;
             }
 
