@@ -15,7 +15,8 @@
                 extend: {
                     colors: {
                         brandRed: '#DC2626',
-                        brandBlue: '#1D4ED8',
+                        brandBlue: '#16A34A', // Ярко-зеленый свет
+                        brandYellow: '#EAB308', // Свет корзинки желтый
                     }
                 }
             }
@@ -38,7 +39,6 @@
             
             <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
                 <a href="#" class="flex items-center space-x-1.5 sm:space-x-2 group">
-                    <!-- Сүрөт тегерек формада логого кошулду[cite: 2] -->
                     <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden shadow-md shadow-red-500/25 group-hover:scale-105 transition shrink-0 border border-slate-200">
                         <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80" alt="Лого" class="w-full h-full object-cover">
                     </div>
@@ -63,9 +63,10 @@
                     <span>📞 +996 (507) 079-796</span>
                 </a>
 
+                <!-- Корзина баскычы сары кылынды -->
                 <button onclick="toggleCart()"
-                    class="bg-brandBlue text-white px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-xl font-medium flex items-center space-x-1 shadow hover:bg-blue-700 transition shrink-0 text-xs sm:text-sm">
-                    <span id="cart-btn-text">🛒 <span class="hidden xs:inline">Корзина</span></span>
+                    class="bg-brandYellow text-slate-900 px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-xl font-bold flex items-center space-x-1 shadow hover:bg-yellow-500 transition shrink-0 text-xs sm:text-sm">
+                    <span id="cart-btn-text">Корзина <span class="hidden xs:inline">Корзина</span></span>
                     <span id="cart-count"
                         class="bg-brandRed text-white text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
@@ -156,13 +157,13 @@
                         <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=200&q=80" alt="Лого" class="w-full h-full object-cover">
                     </span>
                     <span class="sushi-logo-text text-lg"><span class="text-red-500">С</span><span
-                            class="text-red-500">у</span><span class="text-blue-500">ш</span><span
-                            class="text-blue-500">и</span></span>
+                            class="text-red-500">у</span><span class="text-green-500">ш</span><span
+                            class="text-green-500">и</span></span>
                 </h3>
                 <p id="footer-desc" class="text-slate-400 text-sm">Шаардагы эң даамдуу суши жана роллы. Сапат кепилдиги жана тез жеткирүү.</p>
             </div>
             <div>
-                <h4 id="footer-contact" class="font-bold mb-3 text-blue-400">Байланыш</h4>
+                <h4 id="footer-contact" class="font-bold mb-3 text-green-400">Байланыш</h4>
                 <p class="text-slate-400 text-sm mb-1">📞 Телефон: +996 (507) 079-796</p>
                 <p id="footer-address" class="text-slate-400 text-sm mb-3">📍 Дарек: Байтик Баатыр 44</p>
 
@@ -194,7 +195,7 @@
                 </div>
             </div>
             <div>
-                <h4 id="footer-hours-title" class="font-bold mb-3 text-blue-400">Иштөө убактысы</h4>
+                <h4 id="footer-hours-title" class="font-bold mb-3 text-green-400">Иштөө убактысы</h4>
                 <p id="footer-hours" class="text-slate-400 text-sm mb-1">Күн сайын: 10:00 - 06:00</p>
             </div>
         </div>
@@ -259,9 +260,10 @@
                         class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm sm:text-base focus:outline-none focus:border-brandBlue"
                         placeholder="Байтик Баатыр 44">
                     
+                    <!-- Яндекск аркылуу эскертүү кошулду -->
                     <div class="mt-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs sm:text-sm text-amber-800 flex items-start space-x-2">
                         <span class="text-base shrink-0">💡</span>
-                        <span id="delivery-warning-text">Дарек аркылуу доставканын баасы билинет.</span>
+                        <span id="delivery-warning-text">Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.</span>
                     </div>
                 </div>
 
@@ -310,7 +312,7 @@
                 labelName: "Аты-жөнүңүз:",
                 labelPhone: "Телефон номериңиз:",
                 labelAddress: "Жеткирүү дареги:",
-                deliveryWarning: "Дарек аркылуу доставканын баасы билинет.",
+                deliveryWarning: "Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.",
                 btnWhatsapp: "💬 WhatsApp аркылуу заказ кылуу"
             },
             ru: {
@@ -329,7 +331,7 @@
                 optSort: "Сортировка",
                 optCheap: "Сначала дешевле",
                 optExpensive: "Сначала дороже",
-                btnAdd: "В корзину",
+                btnAdd: "Кошуу",
                 footerDesc: "Самые вкусные суши и роллы в городе. Гарантия качества и быстрая доставка.",
                 footerContact: "Контакты",
                 footerAddress: "📍 Адрес: ул. Байтик Баатыра, 44",
@@ -345,7 +347,7 @@
                 labelName: "Ваше имя:",
                 labelPhone: "Номер телефона:",
                 labelAddress: "Адрес доставки:",
-                deliveryWarning: "Стоимость доставки определяется по адресу.",
+                deliveryWarning: "Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.",
                 btnWhatsapp: "💬 Заказать через WhatsApp"
             },
             en: {
@@ -364,7 +366,7 @@
                 optSort: "Sort by",
                 optCheap: "Cheaper first",
                 optExpensive: "Expensive first",
-                btnAdd: "Add",
+                btnAdd: "Кошуу",
                 footerDesc: "The most delicious sushi and rolls in town. Quality guarantee and fast delivery.",
                 footerContact: "Contact",
                 footerAddress: "📍 Address: Baitik Baatyr 44",
@@ -380,7 +382,7 @@
                 labelName: "Your name:",
                 labelPhone: "Phone number:",
                 labelAddress: "Delivery address:",
-                deliveryWarning: "Delivery cost is determined by address.",
+                deliveryWarning: "Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.",
                 btnWhatsapp: "💬 Order via WhatsApp"
             }
         };
@@ -502,7 +504,8 @@
                         </div>
                         <div class="p-4 sm:p-5 pt-0 flex justify-between items-center">
                             <span class="text-lg sm:text-xl font-bold text-brandRed">${product.price} сом</span>
-                            <button onclick="addToCart(${product.id})" class="bg-brandBlue text-white px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium hover:bg-blue-700 transition shadow-sm">${translations[currentLang].btnAdd}</button>
+                            <!-- Кошуу кнопкасы кызыл кылынды (bg-red-600) -->
+                            <button onclick="addToCart(${product.id})" class="bg-red-600 text-white px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium hover:bg-red-700 transition shadow-sm">${translations[currentLang].btnAdd}</button>
                         </div>
                     </div>
                 `;
@@ -640,6 +643,7 @@
             message += `🚚 *Түрү:* ${deliveryType}\n`;
             if (deliveryType === 'Доставка') {
                 message += `📍 *Дарек:* ${address}\n`;
+                message += `ℹ️ *Эскертүү:* Бардык доставкалар яндекс аркылуу болот, баасы ошондо билинет.\n`;
             }
             message += `\n🛒 *Буйрутмалар:*\n`;
 
