@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ky">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Суши — Даамдуу жеткирүү</title>
+    <title id="page-title">Суши — Вкусная доставка</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -36,14 +36,17 @@
     <!-- ХЕДЕР -->
     <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-2 sm:px-4 py-2.5 flex justify-between items-center gap-1 sm:gap-4">
-            
+
             <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
                 <a href="#" class="flex items-center space-x-1.5 sm:space-x-2 group">
-                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden shadow-md shadow-red-500/25 group-hover:scale-105 transition shrink-0 border border-slate-200">
-                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80" alt="Лого" class="w-full h-full object-cover">
+                    <div
+                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden shadow-md shadow-red-500/25 group-hover:scale-105 transition shrink-0 border border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80"
+                            alt="Лого" class="w-full h-full object-cover">
                     </div>
                     <span class="text-lg sm:text-2xl font-black tracking-tight sushi-logo-text">
-                        <span class="text-red-600">С</span><span class="text-red-600">у</span><span class="text-brandBlue">ш</span><span class="text-brandBlue">и</span>
+                        <span class="text-red-600">С</span><span class="text-red-600">у</span><span
+                            class="text-brandBlue">ш</span><span class="text-brandBlue">и</span>
                     </span>
                 </a>
             </div>
@@ -51,9 +54,9 @@
             <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
                 <div class="flex bg-slate-100 p-0.5 rounded-lg sm:rounded-xl border border-slate-200 shrink-0">
                     <button onclick="setLanguage('kg')" id="lang-kg"
-                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg bg-brandBlue text-white transition">KG</button>
+                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg text-slate-700 hover:text-slate-900 transition">KG</button>
                     <button onclick="setLanguage('ru')" id="lang-ru"
-                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg text-slate-700 hover:text-slate-900 transition">RU</button>
+                        class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg bg-brandBlue text-white transition">RU</button>
                     <button onclick="setLanguage('en')" id="lang-en"
                         class="px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg text-slate-700 hover:text-slate-900 transition">EN</button>
                 </div>
@@ -66,7 +69,7 @@
                 <!-- Корзина баскычы сары кылынды -->
                 <button onclick="toggleCart()"
                     class="bg-brandYellow text-slate-900 px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-xl font-bold flex items-center space-x-1 shadow hover:bg-yellow-500 transition shrink-0 text-xs sm:text-sm">
-                    <span id="cart-btn-text">Корзина <span class="hidden xs:inline">Корзина</span></span>
+                    <span id="cart-btn-text">Корзина</span>
                     <span id="cart-count"
                         class="bg-brandRed text-white text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
@@ -92,60 +95,64 @@
 
         <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
             <h1 id="banner-title"
-                class="text-2xl sm:text-4xl md:text-6xl font-black mb-4 drop-shadow-md tracking-tight px-2">Жапон даамы эшигиңиздин алдында</h1>
+                class="text-2xl sm:text-4xl md:text-6xl font-black mb-4 drop-shadow-md tracking-tight px-2">Японский вкус у вашей двери</h1>
             <p id="banner-desc"
-                class="text-xs sm:text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow px-2">Эң жаңы ингредиенттерден даярдалган роллы жана сушилер. Тез жана ыңгайлуу заказ кылыңыз!</p>
+                class="text-xs sm:text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow px-2">Роллы и суши из самых свежих ингредиентов. Заказывайте быстро и удобно!</p>
             <a href="#catalog" id="banner-btn"
-                class="bg-brandRed text-white px-6 sm:px-8 py-3.5 rounded-xl font-bold text-sm sm:text-lg shadow-xl hover:bg-red-700 transition inline-block">Менюну көрүү</a>
+                class="bg-brandRed text-white px-6 sm:px-8 py-3.5 rounded-xl font-bold text-sm sm:text-lg shadow-xl hover:bg-red-700 transition inline-block">Смотреть меню</a>
         </div>
     </section>
 
     <!-- КАТАЛОГ -->
     <main id="catalog" class="max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12 flex-grow w-full">
-        <h2 id="menu-heading" class="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-slate-900">Биздин меню</h2>
+        <h2 id="menu-heading" class="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-slate-900">Наше меню</h2>
 
         <div class="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 mb-8">
             <div class="w-full md:w-1/3">
                 <input type="text" id="search-input" oninput="filterProducts()"
-                    placeholder="Ролл же сеттин атын жазыңыз..."
+                    placeholder="Введите название ролла или сета..."
                     class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-brandBlue shadow-sm">
             </div>
 
             <div class="w-full md:w-auto">
                 <select id="category-select" onchange="filterCategorySelect(this.value)"
                     class="block md:hidden w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue shadow-sm text-slate-700 font-medium">
-                    <option value="all" id="opt-cat-all">Баары</option>
+                    <option value="all" id="opt-cat-all">Все</option>
+                    <option value="комбо" id="opt-cat-combo">Комбо</option>
+                    <option value="пицца" id="opt-cat-pizza">Пицца</option>
                     <option value="роллы" id="opt-cat-rolls">Роллы</option>
                     <option value="сеты" id="opt-cat-sets">Сеты</option>
-                    <option value="суши" id="opt-cat-sushi">Суши</option>
-                    <option value="напитки" id="opt-cat-drinks">Напитки</option>
+                    <option value="рамен" id="opt-cat-ramen">Рамен</option>
                 </select>
 
                 <div class="hidden md:flex flex-wrap gap-2 justify-center" id="category-buttons">
                     <button onclick="filterCategory('all')" id="cat-all"
-                        class="cat-btn bg-brandBlue text-white px-4 py-2 rounded-xl font-medium text-sm transition shadow-sm">Баары</button>
+                        class="cat-btn bg-brandBlue text-white px-4 py-2 rounded-xl font-medium text-sm transition shadow-sm">Все</button>
+                    <button onclick="filterCategory('комбо')" id="cat-combo"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Комбо</button>
+                    <button onclick="filterCategory('пицца')" id="cat-pizza"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Пицца</button>
                     <button onclick="filterCategory('роллы')" id="cat-rolls"
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Роллы</button>
                     <button onclick="filterCategory('сеты')" id="cat-sets"
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Сеты</button>
-                    <button onclick="filterCategory('суши')" id="cat-sushi"
-                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Суши</button>
-                    <button onclick="filterCategory('напитки')" id="cat-drinks"
-                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Напитки</button>
+                    <button onclick="filterCategory('рамен')" id="cat-ramen"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Рамен</button>
                 </div>
             </div>
 
             <div class="w-full md:w-auto">
                 <select id="sort-select" onchange="filterProducts()"
                     class="w-full md:w-auto bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-brandBlue shadow-sm text-slate-700">
-                    <option value="default" id="opt-sort">Сорттоо</option>
-                    <option value="cheap" id="opt-cheap">Арзаныраак</option>
-                    <option value="expensive" id="opt-expensive">Кымбатыраак</option>
+                    <option value="default" id="opt-sort">Сортировка</option>
+                    <option value="cheap" id="opt-cheap">Сначала дешевле</option>
+                    <option value="expensive" id="opt-expensive">Сначала дороже</option>
                 </select>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="product-grid"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="product-grid">
+        </div>
     </main>
 
     <!-- ФУТЕР -->
@@ -153,19 +160,21 @@
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <h3 class="text-xl font-bold mb-3 text-brandRed flex items-center space-x-2">
-                    <span class="w-6 h-6 rounded-full overflow-hidden inline-block align-middle border border-slate-700">
-                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=200&q=80" alt="Лого" class="w-full h-full object-cover">
+                    <span
+                        class="w-6 h-6 rounded-full overflow-hidden inline-block align-middle border border-slate-700">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=200&q=80"
+                            alt="Лого" class="w-full h-full object-cover">
                     </span>
                     <span class="sushi-logo-text text-lg"><span class="text-red-500">С</span><span
                             class="text-red-500">у</span><span class="text-green-500">ш</span><span
                             class="text-green-500">и</span></span>
                 </h3>
-                <p id="footer-desc" class="text-slate-400 text-sm">Шаардагы эң даамдуу суши жана роллы. Сапат кепилдиги жана тез жеткирүү.</p>
+                <p id="footer-desc" class="text-slate-400 text-sm">Самые вкусные суши и роллы в городе. Гарантия качества и быстрая доставка.</p>
             </div>
             <div>
-                <h4 id="footer-contact" class="font-bold mb-3 text-green-400">Байланыш</h4>
+                <h4 id="footer-contact" class="font-bold mb-3 text-green-400">Контакты</h4>
                 <p class="text-slate-400 text-sm mb-1">📞 Телефон: +996 (507) 079-796</p>
-                <p id="footer-address" class="text-slate-400 text-sm mb-3">📍 Дарек: Байтик Баатыр 44</p>
+                <p id="footer-address" class="text-slate-400 text-sm mb-3">📍 Адрес: ул. Байтик Баатыра, 44</p>
 
                 <div class="flex items-center space-x-3 mt-2">
                     <a href="https://instagram.com" target="_blank"
@@ -195,13 +204,13 @@
                 </div>
             </div>
             <div>
-                <h4 id="footer-hours-title" class="font-bold mb-3 text-green-400">Иштөө убактысы</h4>
-                <p id="footer-hours" class="text-slate-400 text-sm mb-1">Күн сайын: 10:00 - 06:00</p>
+                <h4 id="footer-hours-title" class="font-bold mb-3 text-green-400">Режим работы</h4>
+                <p id="footer-hours" class="text-slate-400 text-sm mb-1">Ежедневно: 10:00 - 06:00</p>
             </div>
         </div>
         <div id="footer-copy"
             class="max-w-7xl mx-auto px-4 pt-8 mt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-            &copy; 2026 СУШИ. Бардык укуктар корголгон.
+            &copy; 2026 Суши. Все права защищены.
         </div>
     </footer>
 
@@ -211,20 +220,20 @@
             <button onclick="toggleCart()"
                 class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
 
-            <h2 id="modal-title" class="text-xl sm:text-2xl font-bold mb-4 text-slate-900">Сиздин буйрутмаңыз</h2>
+            <h2 id="modal-title" class="text-xl sm:text-2xl font-bold mb-4 text-slate-900">Ваш заказ</h2>
 
             <div id="cart-items" class="divide-y divide-slate-100 mb-4">
-                <p id="cart-empty" class="text-slate-500 text-center py-6">Корзинаңыз бош</p>
+                <p id="cart-empty" class="text-slate-500 text-center py-6">Ваша корзина пуста</p>
             </div>
 
             <div class="border-t pt-4 mb-6 flex justify-between items-center text-lg sm:text-xl font-bold">
-                <span id="modal-total-text">Жалпы баасы:</span>
+                <span id="modal-total-text">Итого:</span>
                 <span id="cart-total" class="text-brandRed">0 сом</span>
             </div>
 
             <form id="order-form" onsubmit="checkoutWhatsApp(event)" class="space-y-3 sm:space-y-4">
                 <div>
-                    <label id="label-delivery-type" class="block text-sm font-medium text-slate-700 mb-1">Алуу ыкмасы:</label>
+                    <label id="label-delivery-type" class="block text-sm font-medium text-slate-700 mb-1">Способ получения:</label>
                     <div class="grid grid-cols-2 gap-3 sm:gap-4">
                         <label
                             class="border rounded-xl p-2.5 sm:p-3 flex items-center space-x-2 cursor-pointer hover:border-brandBlue transition">
@@ -241,36 +250,36 @@
                 </div>
 
                 <div>
-                    <label id="label-name" class="block text-sm font-medium text-slate-700 mb-1">Аты-жөнүңүз:</label>
+                    <label id="label-name" class="block text-sm font-medium text-slate-700 mb-1">Ваше имя:</label>
                     <input type="text" id="client-name" required
                         class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm sm:text-base focus:outline-none focus:border-brandBlue"
-                        placeholder="Атай">
+                        placeholder="Иван">
                 </div>
 
                 <div>
-                    <label id="label-phone" class="block text-sm font-medium text-slate-700 mb-1">Телефон номериңиз:</label>
+                    <label id="label-phone" class="block text-sm font-medium text-slate-700 mb-1">Номер телефона:</label>
                     <input type="tel" id="client-phone" required
                         class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm sm:text-base focus:outline-none focus:border-brandBlue"
                         placeholder="+996 XXX XXX XXX">
                 </div>
 
                 <div id="address-field">
-                    <label id="label-address" class="block text-sm font-medium text-slate-700 mb-1">Жеткирүү дареги:</label>
+                    <label id="label-address" class="block text-sm font-medium text-slate-700 mb-1">Адрес доставки:</label>
                     <input type="text" id="client-address"
                         class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm sm:text-base focus:outline-none focus:border-brandBlue"
-                        placeholder="Байтик Баатыр 44">
-                    
-                    <!-- Яндекск аркылуу эскертүү кошулду -->
-                    <div class="mt-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs sm:text-sm text-amber-800 flex items-start space-x-2">
+                        placeholder="ул. Байтик Баатыра, 44">
+
+                    <div
+                        class="mt-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs sm:text-sm text-amber-800 flex items-start space-x-2">
                         <span class="text-base shrink-0">💡</span>
-                        <span id="delivery-warning-text">Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.</span>
+                        <span id="delivery-warning-text">Все доставки осуществляются через Яндекс, стоимость будет известна при оформлении.</span>
                     </div>
                 </div>
 
                 <div class="space-y-2 pt-2">
                     <button type="submit" id="btn-whatsapp"
                         class="w-full bg-green-600 text-white py-3 rounded-xl font-bold text-sm sm:text-base hover:bg-green-700 transition shadow-md flex items-center justify-center space-x-2">
-                        <span>💬 WhatsApp аркылуу заказ кылуу</span>
+                        <span>💬 Заказать через WhatsApp</span>
                     </button>
                 </div>
             </form>
@@ -289,14 +298,15 @@
                 menuHeading: "Биздин меню",
                 searchPlaceholder: "Ролл же сеттин атын жазыңыз...",
                 catAll: "Баары",
+                catCombo: "Комбо",
+                catPizza: "Пицца",
                 catRolls: "Роллы",
                 catSets: "Сеты",
-                catSushi: "Суши",
-                catDrinks: "Напитки",
+                catRamen: "Рамен",
                 optSort: "Сорттоо",
                 optCheap: "Арзаныраак",
                 optExpensive: "Кымбатыраак",
-                btnAdd: "Кошуу",
+                btnAdd: "Себетке",
                 footerDesc: "Шаардагы эң даамдуу суши жана роллы. Сапат кепилдиги жана тез жеткирүү.",
                 footerContact: "Байланыш",
                 footerAddress: "📍 Дарек: Байтик Баатыр 44",
@@ -324,14 +334,15 @@
                 menuHeading: "Наше меню",
                 searchPlaceholder: "Введите название ролла или сета...",
                 catAll: "Все",
+                catCombo: "Комбо",
+                catPizza: "Пицца",
                 catRolls: "Роллы",
                 catSets: "Сеты",
-                catSushi: "Суши",
-                catDrinks: "Напитки",
+                catRamen: "Рамен",
                 optSort: "Сортировка",
                 optCheap: "Сначала дешевле",
                 optExpensive: "Сначала дороже",
-                btnAdd: "Кошуу",
+                btnAdd: "В корзину",
                 footerDesc: "Самые вкусные суши и роллы в городе. Гарантия качества и быстрая доставка.",
                 footerContact: "Контакты",
                 footerAddress: "📍 Адрес: ул. Байтик Баатыра, 44",
@@ -347,7 +358,7 @@
                 labelName: "Ваше имя:",
                 labelPhone: "Номер телефона:",
                 labelAddress: "Адрес доставки:",
-                deliveryWarning: "Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.",
+                deliveryWarning: "Все доставки осуществляются через Яндекс, стоимость будет известна при оформлении.",
                 btnWhatsapp: "💬 Заказать через WhatsApp"
             },
             en: {
@@ -359,14 +370,15 @@
                 menuHeading: "Our Menu",
                 searchPlaceholder: "Search roll or set...",
                 catAll: "All",
+                catCombo: "Combo",
+                catPizza: "Pizza",
                 catRolls: "Rolls",
                 catSets: "Sets",
-                catSushi: "Sushi",
-                catDrinks: "Drinks",
+                catRamen: "Ramen",
                 optSort: "Sort by",
                 optCheap: "Cheaper first",
                 optExpensive: "Expensive first",
-                btnAdd: "Кошуу",
+                btnAdd: "Add to cart",
                 footerDesc: "The most delicious sushi and rolls in town. Quality guarantee and fast delivery.",
                 footerContact: "Contact",
                 footerAddress: "📍 Address: Baitik Baatyr 44",
@@ -382,12 +394,12 @@
                 labelName: "Your name:",
                 labelPhone: "Phone number:",
                 labelAddress: "Delivery address:",
-                deliveryWarning: "Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.",
+                deliveryWarning: "All deliveries are made via Yandex, the price will be known upon checkout.",
                 btnWhatsapp: "💬 Order via WhatsApp"
             }
         };
 
-        let currentLang = 'kg';
+        let currentLang = 'ru';
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -412,16 +424,18 @@
             document.getElementById('search-input').placeholder = t.searchPlaceholder;
 
             document.getElementById('opt-cat-all').innerText = t.catAll;
+            document.getElementById('opt-cat-combo').innerText = t.catCombo;
+            document.getElementById('opt-cat-pizza').innerText = t.catPizza;
             document.getElementById('opt-cat-rolls').innerText = t.catRolls;
             document.getElementById('opt-cat-sets').innerText = t.catSets;
-            document.getElementById('opt-cat-sushi').innerText = t.catSushi;
-            document.getElementById('opt-cat-drinks').innerText = t.catDrinks;
+            document.getElementById('opt-cat-ramen').innerText = t.catRamen;
 
             document.getElementById('cat-all').innerText = t.catAll;
+            document.getElementById('cat-combo').innerText = t.catCombo;
+            document.getElementById('cat-pizza').innerText = t.catPizza;
             document.getElementById('cat-rolls').innerText = t.catRolls;
             document.getElementById('cat-sets').innerText = t.catSets;
-            document.getElementById('cat-sushi').innerText = t.catSushi;
-            document.getElementById('cat-drinks').innerText = t.catDrinks;
+            document.getElementById('cat-ramen').innerText = t.catRamen;
 
             document.getElementById('opt-sort').innerText = t.optSort;
             document.getElementById('opt-cheap').innerText = t.optCheap;
@@ -464,22 +478,48 @@
         setInterval(changeSlide, 4000);
 
         const products = [
-            { id: 1, name: { kg: 'Филадельфия Классик', ru: 'Филадельфия Классик', en: 'Philadelphia Classic' }, category: 'роллы', price: 450, desc: { kg: 'Лосось, сливочный сыр, авокадо, рис, нори.', ru: 'Лосось, сливочный сыр, авокадо, рис, нори.', en: 'Salmon, cream cheese, avocado, rice, nori.' }, img: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=600&q=80' },
-            { id: 2, name: { kg: 'Калифорния с крабом', ru: 'Калифорния с крабом', en: 'California with Crab' }, category: 'роллы', price: 380, desc: { kg: 'Краб-микс, авокадо, огурец, тобико.', ru: 'Краб-микс, авокадо, огурец, тобико.', en: 'Crab mix, avocado, cucumber, tobiko.' }, img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80' },
-            { id: 3, name: { kg: 'Сет «Самурай» (32 шт)', ru: 'Сет «Самурай» (32 шт)', en: 'Samurai Set (32 pcs)' }, category: 'сеты', price: 1600, desc: { kg: 'Филадельфия, Калифорния, Дракон, Маки с угрем.', ru: 'Филадельфия, Калифорния, Дракон, Маки с угрем.', en: 'Philadelphia, California, Dragon, Eel Maki.' }, img: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80' },
-            { id: 4, name: { kg: 'Сет «Tokyo» (16 шт)', ru: 'Сет «Tokyo» (16 шт)', en: 'Tokyo Set (16 pcs)' }, category: 'сеты', price: 950, desc: { kg: 'Ассорти из популярных роллов для двоих.', ru: 'Ассорти из популярных роллов для двоих.', en: 'Assorted popular rolls for two.' }, img: 'https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80' },
-            { id: 5, name: { kg: 'Суши с лососем (Нигири)', ru: 'Суши с лососем (Нигири)', en: 'Salmon Sushi (Nigiri)' }, category: 'суши', price: 150, desc: { kg: 'Свежий охлажденный лосось на подушке из риса.', ru: 'Свежий охлажденный лосось на подушке из риса.', en: 'Fresh chilled salmon on a bed of rice.' }, img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80' },
-            { id: 6, name: { kg: 'Суши с угрем', ru: 'Суши с угрем', en: 'Eel Sushi' }, category: 'суши', price: 180, desc: { kg: 'Копченый угорь, унаги соус, кунжут.', ru: 'Копченый угорь, унаги соус, кунжут.', en: 'Smoked eel, unagi sauce, sesame.' }, img: 'https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=600&q=80' },
-            { id: 7, name: { kg: 'Кока-Кола 0.5л', ru: 'Кока-Кола 0.5л', en: 'Coca-Cola 0.5L' }, category: 'напитки', price: 100, desc: { kg: 'Газированный прохладительный напиток.', ru: 'Газированный прохладительный напиток.', en: 'Carbonated soft drink.' }, img: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80' },
-            { id: 8, name: { kg: 'Холодный чай Лимон', ru: 'Холодный чай Лимон', en: 'Lemon Iced Tea' }, category: 'напитки', price: 110, desc: { kg: 'Освежающий холодный чай.', ru: 'Освежающий холодный чай.', en: 'Refreshing iced tea.' }, img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80' }
-        ];
+            // КОМБО
+            { id: 9, name: { kg: 'Комбо 1', ru: 'Комбо 1', en: 'Combo 1' }, category: 'комбо', price: 899, desc: { kg: 'Пицца Пепперони 30 см + ар түрдүү роллдор сети + картошка фри + Pepsi 1 л', ru: 'Пицца Пепперони 30 см + ассорти роллов + картофель фри + Pepsi 1 л', en: 'Pepperoni pizza 30cm + assorted rolls + french fries + Pepsi 1L' }, img: 'combo1.PNG' },
+            { id: 10, name: { kg: 'Комбо 2', ru: 'Комбо 2', en: 'Combo 2' }, category: 'комбо', price: 500, desc: { kg: 'Пицца Пепперони 30 см + жаренные роллдор сети + Pepsi 1 л', ru: 'Пицца Пепперони 30 см + ассорти жареных роллов + Pepsi 1 л', en: 'Pepperoni pizza 30cm + assorted fried rolls + Pepsi 1L' }, img: 'combo2.PNG' },
+            { id: 12, name: { kg: 'Комбо 3', ru: 'Комбо 3', en: 'Combo 3' }, category: 'комбо', price: 999, desc: { kg: 'Пицца Пепперони 30 см + жаренные роллдор сети + картошка фри + напиток', ru: 'Пицца Пепперони 30 см + ассорти жареных роллов + картофель фри + напиток', en: 'Pepperoni pizza 30cm + assorted fried rolls + french fries + drink' }, img: 'combo3.PNG' },
 
+
+            // ПИЦЦА
+            { id: 20, name: { kg: 'Пицца Куриный 30 см', ru: 'Пицца Куриный 30 см', en: 'Chicken Pizza 30cm' }, category: 'пицца', price: 640, desc: { kg: 'Сочная куриная пицца 30 см на тонком тесте с нежным соусом.', ru: 'Сочная куриная пицца 30 см на тонком тесте с нежным соусом.', en: 'Juicy chicken pizza 30cm on thin dough with tender sauce.' }, img: 'куриныйпицца.PNG' },
+            { id: 21, name: { kg: 'Пицца Охотничий 30 см', ru: 'Пицца Охотничий 30 см', en: 'Hunter Pizza 30cm' }, category: 'пицца', price: 699, desc: { kg: 'Охотничья пицца 30 см с охотничьими колбасками и сочной начинкой.', ru: 'Охотничья пицца 30 см с охотничьими колбасками и сочной начинкой.', en: 'Hunter pizza 30cm with hunter sausages and juicy toppings.' }, img: 'охотницыйпицца.PNG' },
+            { id: 22, name: { kg: 'Маргарита 30 см', ru: 'Маргарита 30 см', en: 'Margherita 30cm' }, category: 'пицца', price: 450, desc: { kg: 'Классическая Маргарита 30 см с томатным соусом и моцареллой.', ru: 'Классическая Маргарита 30 см с томатным соусом и моцареллой.', en: 'Classic Margherita 30cm with tomato sauce and mozzarella.' }, img: 'маргаритапицца.PNG' },
+            { id: 23, name: { kg: 'Пицца Пепперони 30 см', ru: 'Пицца Пепперони 30 см', en: 'Pepperoni Pizza 30cm' }, category: 'пицца', price: 599, desc: { kg: 'Классическая пепперони пицца 30 см с острыми колбасками и сыром.', ru: 'Классическая пепперони пицца 30 см с острыми колбасками и сыром.', en: 'Classic pepperoni pizza 30cm with spicy sausage and cheese.' }, img: 'пеперонипицца.PNG' },
+            { id: 24, name: { kg: 'Пицца Филадельфия 30 см', ru: 'Пицца Филадельфия 30 см', en: 'Philadelphia Pizza 30cm' }, category: 'пицца', price: 799, desc: { kg: 'Пицца Филадельфия 30 см с лососем и сливочным сыром.', ru: 'Пицца Филадельфия 30 см с лососем и сливочным сыром.', en: 'Philadelphia pizza 30cm with salmon and cream cheese.' }, img: 'филаделфияпицца.PNG' },
+
+            // СЕТЫ
+            { id: 30, name: { kg: 'Сет Острый микс 25 шт', ru: 'Сет Острый микс 25 шт', en: 'Spicy Mix Set 25 pcs' }, category: 'сеты', price: 1299, desc: { kg: 'Курч аралаш сет — 25 даана ар кандай роллдор менен.', ru: 'Острый микс сет — 25 штук разнообразных роллов.', en: 'Spicy mix set — 25 pieces of assorted rolls.' }, img: 'сетострый.PNG' },
+            { id: 31, name: { kg: 'Сет Невада 32 шт', ru: 'Сет Невада 32 шт', en: 'Nevada Set 32 pcs' }, category: 'сеты', price: 999, desc: { kg: 'Невада сети — 32 даана ар кандай роллдор менен.', ru: 'Сет Невада — 32 штуки разнообразных роллов.', en: 'Nevada set — 32 pieces of assorted rolls.' }, img: 'сетневада.PNG' },
+            { id: 32, name: { kg: 'Сет Комбо 34 шт', ru: 'Сет Комбо 34 шт', en: 'Combo Set 34 pcs' }, category: 'сеты', price: 1599, desc: { kg: 'Комбо сети — 34 даана ар кандай роллдор менен.', ru: 'Сет Комбо — 34 штуки разнообразных роллов.', en: 'Combo set — 34 pieces of assorted rolls.' }, img: 'сеткомбо.PNG' },
+
+            // РОЛЛЫ
+            { id: 40, name: { kg: 'Асахи', ru: 'Асахи', en: 'Asahi' }, category: 'роллы', price: 399, desc: { kg: 'Асахи ролл — жапон роллунун классикалык рецепти.', ru: 'Ролл Асахи — классический японский рецепт.', en: 'Asahi roll — classic Japanese recipe.' }, img: 'асахи.PNG' },
+            { id: 41, name: { kg: 'Аляска', ru: 'Аляска', en: 'Alaska' }, category: 'роллы', price: 599, desc: { kg: 'Аляска ролл — лосось жана авокадо менен даамдуу ролл.', ru: 'Ролл Аляска — вкусный ролл с лососем и авокадо.', en: 'Alaska roll — delicious roll with salmon and avocado.' }, img: 'аляска.PNG' },
+            { id: 42, name: { kg: 'Калифорния лососем', ru: 'Калифорния с лососем', en: 'California with Salmon' }, category: 'роллы', price: 439, desc: { kg: 'Лосось менен Калифорния ролл — жаңы даам.', ru: 'Калифорния с лососем — свежий вкус.', en: 'California with salmon — fresh taste.' }, img: 'колифорниясласос.PNG' },
+            { id: 43, name: { kg: 'Лайм ролл', ru: 'Лайм ролл', en: 'Lime Roll' }, category: 'роллы', price: 399, desc: { kg: 'Лайм ролл — лимон жана лайм менен жаңы ролл.', ru: 'Лайм ролл — свежий ролл с лимоном и лаймом.', en: 'Lime roll — fresh roll with lemon and lime.' }, img: 'лаймролл.PNG' },
+            { id: 44, name: { kg: 'Ямамото', ru: 'Ямамото', en: 'Yamamoto' }, category: 'роллы', price: 499, desc: { kg: 'Ямамото ролл — жапон даамынын классикасы.', ru: 'Ролл Ямамото — классика японского вкуса.', en: 'Yamamoto roll — classic Japanese taste.' }, img: 'ямамото.PNG' },
+            { id: 45, name: { kg: 'Тори чиз', ru: 'Тори чиз', en: 'Tori Cheese' }, category: 'роллы', price: 399, desc: { kg: 'Тори чиз ролл — куурулган тооп жана сыр менен.', ru: 'Тори чиз ролл — с жареной курицей и сыром.', en: 'Tori cheese roll — with fried chicken and cheese.' }, img: 'торичисс.PNG' },
+            { id: 46, name: { kg: 'Филадельфия', ru: 'Филадельфия', en: 'Philadelphia' }, category: 'роллы', price: 549, desc: { kg: 'Филадельфия ролл — классический ролл лосось жана кремдүү сыр менен.', ru: 'Филадельфия ролл — классический ролл с лососем и сливочным сыром.', en: 'Philadelphia roll — classic roll with salmon and cream cheese.' }, img: 'филаделфия.PNG' },
+            { id: 47, name: { kg: 'Дивора', ru: 'Дивора', en: 'Divora' }, category: 'роллы', price: 699, desc: { kg: 'Дивора ролл — премиум класстагы ролл.', ru: 'Ролл Дивора — ролл премиум класса.', en: 'Divora roll — premium class roll.' }, img: 'дивора.PNG' },
+            { id: 48, name: { kg: 'Калифорния', ru: 'Калифорния', en: 'California' }, category: 'роллы', price: 399, desc: { kg: 'Классикалык Калифорния ролл — краб жана авокадо менен.', ru: 'Классический ролл Калифорния — с крабом и авокадо.', en: 'Classic California roll — with crab and avocado.' }, img: 'колифорния.PNG' },
+
+            // РАМЕН
+            { id: 13, name: { kg: 'Рамён с курицей', ru: 'Рамён с курицей', en: 'Chicken Ramen' }, category: 'рамен', price: 300, desc: { kg: 'Ароматный рамён с кусочками куриного филе, шампиньонами, половинкой вареного яйца и зеленью.', ru: 'Ароматный рамён с кусочками куриного филе, шампиньонами, половинкой вареного яйца и зеленью.', en: 'Aromatic ramen with chicken, mushrooms, half boiled egg and greens.' }, img: 'ramen1.PNG' },
+            { id: 14, name: { kg: 'Рамён классика', ru: 'Рамён классика', en: 'Classic Ramen' }, category: 'рамен', price: 280, desc: { kg: 'Шампиньоны, половинкой вареного яйца и зеленью в ароматном бульоне.', ru: 'Шампиньоны, половинкой вареного яйца и зеленью в ароматном бульоне.', en: 'Mushrooms, half boiled egg and greens in aromatic broth.' }, img: 'ramen2.PNG' },
+            { id: 15, name: { kg: 'Рамён с сыром', ru: 'Рамён с сыром', en: 'Cheese Ramen' }, category: 'рамен', price: 320, desc: { kg: 'Нежный рамён с расплавленным сыром, шампиньонами, половинкой вареного яйца и зеленью.', ru: 'Нежный рамён с расплавленным сыром, шампиньонами, половинкой вареного яйца и зеленью.', en: 'Tender ramen with melted cheese, mushrooms, half boiled egg and greens.' }, img: 'ramen3.PNG' },
+            { id: 16, name: { kg: 'Жаренный рамён с сыром', ru: 'Жаренный рамён с сыром', en: 'Fried Ramen with Cheese' }, category: 'рамен', price: 340, desc: { kg: 'Куурулган рамён — кытырак нандын күкүмүндө бышырылган, сыр менен.', ru: 'Жареный рамён в хрустящей панировке с сыром.', en: 'Fried ramen in crispy breading with cheese.' }, img: 'жаренныйраменсссыром.PNG' },
+            { id: 17, name: { kg: 'Жаренный рамён с курицей', ru: 'Жаренный рамён с курицей', en: 'Fried Ramen with Chicken' }, category: 'рамен', price: 400, desc: { kg: 'Куурулган рамён — кытырак нандын күкүмүндө бышырылган, тооп менен.', ru: 'Жареный рамён в хрустящей панировке с курицей.', en: 'Fried ramen in crispy breading with chicken.' }, img: 'жаренныйраменскурецей.PNG' }
+        ];
         let cart = [];
         let currentCategory = 'all';
         let currentFilteredProducts = products;
 
         window.addEventListener('DOMContentLoaded', () => {
-            renderProducts(products);
+            setLanguage('ru');
         });
 
         function renderProducts(items) {
@@ -488,7 +528,8 @@
             grid.innerHTML = '';
 
             if (items.length === 0) {
-                grid.innerHTML = `<p class="col-span-full text-center text-slate-500 py-10">Эч нерсе табылган жок.</p>`;
+                const noResultText = { kg: 'Эч нерсе табылган жок.', ru: 'Ничего не найдено.', en: 'Nothing found.' };
+                grid.innerHTML = `<p class="col-span-full text-center text-slate-500 py-10">${noResultText[currentLang]}</p>`;
                 return;
             }
 
@@ -496,7 +537,10 @@
                 grid.innerHTML += `
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
                         <div>
-                            <img src="${product.img}" alt="${product.name[currentLang]}" class="w-full h-44 sm:h-48 object-cover">
+                            <div class="w-full bg-white" style="aspect-ratio: 4/3; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                <img src="${product.img}" alt="${product.name[currentLang]}" 
+                                     style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                            </div>
                             <div class="p-4 sm:p-5">
                                 <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1">${product.name[currentLang]}</h3>
                                 <p class="text-slate-500 text-xs sm:text-sm mb-4 line-clamp-2">${product.desc[currentLang]}</p>
