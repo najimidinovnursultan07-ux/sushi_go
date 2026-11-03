@@ -121,8 +121,11 @@
                     <option value="комбо" id="opt-cat-combo">Комбо</option>
                     <option value="пицца" id="opt-cat-pizza">Пицца</option>
                     <option value="роллы" id="opt-cat-rolls">Роллы</option>
+                    <option value="запеченные" id="opt-cat-baked">Запеченные</option>
+                    <option value="темпура" id="opt-cat-tempura">Темпура</option>
                     <option value="сеты" id="opt-cat-sets">Сеты</option>
                     <option value="рамен" id="opt-cat-ramen">Рамен</option>
+                    <option value="крылышки" id="opt-cat-wings">Крылышки</option>
                 </select>
 
                 <div class="hidden md:flex flex-wrap gap-2 justify-center" id="category-buttons">
@@ -134,10 +137,16 @@
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Пицца</button>
                     <button onclick="filterCategory('роллы')" id="cat-rolls"
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Роллы</button>
+                    <button onclick="filterCategory('запеченные')" id="cat-baked"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Запеченные</button>
+                    <button onclick="filterCategory('темпура')" id="cat-tempura"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Темпура</button>
                     <button onclick="filterCategory('сеты')" id="cat-sets"
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Сеты</button>
                     <button onclick="filterCategory('рамен')" id="cat-ramen"
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Рамен</button>
+                    <button onclick="filterCategory('крылышки')" id="cat-wings"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Крылышки</button>
                 </div>
             </div>
 
@@ -174,7 +183,7 @@
             <div>
                 <h4 id="footer-contact" class="font-bold mb-3 text-green-400">Контакты</h4>
                 <p class="text-slate-400 text-sm mb-1">📞 Телефон: +996 (507) 079-796</p>
-                <p id="footer-address" class="text-slate-400 text-sm mb-3">📍 Адрес: ул. Байтик Баатыра, 44</p>
+                <p id="footer-address" class="text-slate-400 text-sm mb-3">📍 Адрес: ул. Жусупа Абдрахманова, 194</p>
 
                 <div class="flex items-center space-x-3 mt-2">
                     <a href="https://instagram.com" target="_blank"
@@ -267,7 +276,7 @@
                     <label id="label-address" class="block text-sm font-medium text-slate-700 mb-1">Адрес доставки:</label>
                     <input type="text" id="client-address"
                         class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm sm:text-base focus:outline-none focus:border-brandBlue"
-                        placeholder="ул. Байтик Баатыра, 44">
+                        placeholder="ул. Жусупа Абдрахманова, 194">
 
                     <div
                         class="mt-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs sm:text-sm text-amber-800 flex items-start space-x-2">
@@ -303,13 +312,16 @@
                 catRolls: "Роллы",
                 catSets: "Сеты",
                 catRamen: "Рамен",
+                catBaked: "Бышырылгандар",
+                catTempura: "Темпура",
+                catWings: "Канаттар",
                 optSort: "Сорттоо",
                 optCheap: "Арзаныраак",
                 optExpensive: "Кымбатыраак",
                 btnAdd: "Себетке",
                 footerDesc: "Шаардагы эң даамдуу суши жана роллы. Сапат кепилдиги жана тез жеткирүү.",
                 footerContact: "Байланыш",
-                footerAddress: "📍 Дарек: Байтик Баатыр 44",
+                footerAddress: "📍 Дарек: Жусуп Абдрахманова 194",
                 footerHoursTitle: "Иштөө убактысы",
                 footerHours: "Күн сайын: 10:00 - 06:00",
                 footerCopy: "© 2026 СУШИ. Бардык укуктар корголгон.",
@@ -339,13 +351,16 @@
                 catRolls: "Роллы",
                 catSets: "Сеты",
                 catRamen: "Рамен",
+                catBaked: "Запеченные",
+                catTempura: "Темпура",
+                catWings: "Крылышки",
                 optSort: "Сортировка",
                 optCheap: "Сначала дешевле",
                 optExpensive: "Сначала дороже",
                 btnAdd: "В корзину",
                 footerDesc: "Самые вкусные суши и роллы в городе. Гарантия качества и быстрая доставка.",
                 footerContact: "Контакты",
-                footerAddress: "📍 Адрес: ул. Байтик Баатыра, 44",
+                footerAddress: "📍 Адрес: ул. Жусупа Абдрахманова, 194",
                 footerHoursTitle: "Режим работы",
                 footerHours: "Ежедневно: 10:00 - 06:00",
                 footerCopy: "© 2026 Суши. Все права защищены.",
@@ -375,13 +390,16 @@
                 catRolls: "Rolls",
                 catSets: "Sets",
                 catRamen: "Ramen",
+                catBaked: "Baked",
+                catTempura: "Tempura",
+                catWings: "Wings",
                 optSort: "Sort by",
                 optCheap: "Cheaper first",
                 optExpensive: "Expensive first",
                 btnAdd: "Add to cart",
                 footerDesc: "The most delicious sushi and rolls in town. Quality guarantee and fast delivery.",
                 footerContact: "Contact",
-                footerAddress: "📍 Address: Baitik Baatyr 44",
+                footerAddress: "📍 Address: Zhusup Abdrakhmanova 194",
                 footerHoursTitle: "Working Hours",
                 footerHours: "Every day: 10:00 - 06:00",
                 footerCopy: "© 2026 Sushi. All rights reserved.",
@@ -429,6 +447,9 @@
             document.getElementById('opt-cat-rolls').innerText = t.catRolls;
             document.getElementById('opt-cat-sets').innerText = t.catSets;
             document.getElementById('opt-cat-ramen').innerText = t.catRamen;
+            document.getElementById('opt-cat-baked').innerText = t.catBaked;
+            document.getElementById('opt-cat-tempura').innerText = t.catTempura;
+            document.getElementById('opt-cat-wings').innerText = t.catWings;
 
             document.getElementById('cat-all').innerText = t.catAll;
             document.getElementById('cat-combo').innerText = t.catCombo;
@@ -436,6 +457,9 @@
             document.getElementById('cat-rolls').innerText = t.catRolls;
             document.getElementById('cat-sets').innerText = t.catSets;
             document.getElementById('cat-ramen').innerText = t.catRamen;
+            document.getElementById('cat-baked').innerText = t.catBaked;
+            document.getElementById('cat-tempura').innerText = t.catTempura;
+            document.getElementById('cat-wings').innerText = t.catWings;
 
             document.getElementById('opt-sort').innerText = t.optSort;
             document.getElementById('opt-cheap').innerText = t.optCheap;
@@ -479,8 +503,10 @@
 
         const products = [
             // КОМБО
-            { id: 9, name: { kg: 'Комбо 1', ru: 'Комбо 1', en: 'Combo 1' }, category: 'комбо', price: 899, desc: { kg: 'Пицца Пепперони 30 см + ар түрдүү роллдор сети + картошка фри + Pepsi 1 л', ru: 'Пицца Пепперони 30 см + ассорти роллов + картофель фри + Pepsi 1 л', en: 'Pepperoni pizza 30cm + assorted rolls + french fries + Pepsi 1L' }, img: 'combo1.PNG' },
-            { id: 10, name: { kg: 'Комбо 2', ru: 'Комбо 2', en: 'Combo 2' }, category: 'комбо', price: 500, desc: { kg: 'Пицца Пепперони 30 см + жаренные роллдор сети + Pepsi 1 л', ru: 'Пицца Пепперони 30 см + ассорти жареных роллов + Pepsi 1 л', en: 'Pepperoni pizza 30cm + assorted fried rolls + Pepsi 1L' }, img: 'combo2.PNG' },
+            { id: 11, name: { kg: 'Жаренный комбо', ru: 'Жаренный комбо', en: 'Fried Combo' }, category: 'комбо', price: 899, oldPrice: 1299, desc: { kg: 'Жаренный комбо: пицца пепперони + куурулган роллдор + картошка фри + напиток.', ru: 'Жаренный комбо: пицца пепперони + жареные роллы + картофель фри + напиток.', en: 'Fried combo: pepperoni pizza + fried rolls + french fries + drink.' }, img: 'жаренныйкомбо.PNG' },
+            { id: 13, name: { kg: 'Сливочный комбо', ru: 'Сливочный комбо', en: 'Creamy Combo' }, category: 'комбо', price: 999, oldPrice: 1399, desc: { kg: 'Сливочный комбо: пицца пепперони + сливочный рамён + роллдор + напиток.', ru: 'Сливочный комбо: пицца пепперони + сливочный рамён + роллы + напиток.', en: 'Creamy combo: pepperoni pizza + creamy ramen + rolls + drink.' }, img: 'сливочныйкомбо.PNG' },
+            { id: 9, name: { kg: 'Комбо 1', ru: 'Комбо 1', en: 'Combo 1' }, category: 'комбо', price: 1499, desc: { kg: 'Пицца Пепперони 30 см + ар түрдүү роллдор сети + картошка фри + Pepsi 1 л', ru: 'Пицца Пепперони 30 см + ассорти роллов + картофель фри + Pepsi 1 л', en: 'Pepperoni pizza 30cm + assorted rolls + french fries + Pepsi 1L' }, img: 'combo1.PNG' },
+            { id: 10, name: { kg: 'Комбо 2', ru: 'Комбо 2', en: 'Combo 2' }, category: 'комбо', price: 1199, desc: { kg: 'Пицца Пепперони 30 см + жаренные роллдор сети + Pepsi 1 л', ru: 'Пицца Пепперони 30 см + ассорти жареных роллов + Pepsi 1 л', en: 'Pepperoni pizza 30cm + assorted fried rolls + Pepsi 1L' }, img: 'combo2.PNG' },
             { id: 12, name: { kg: 'Комбо 3', ru: 'Комбо 3', en: 'Combo 3' }, category: 'комбо', price: 999, desc: { kg: 'Пицца Пепперони 30 см + жаренные роллдор сети + картошка фри + напиток', ru: 'Пицца Пепперони 30 см + ассорти жареных роллов + картофель фри + напиток', en: 'Pepperoni pizza 30cm + assorted fried rolls + french fries + drink' }, img: 'combo3.PNG' },
 
 
@@ -512,7 +538,24 @@
             { id: 14, name: { kg: 'Рамён классика', ru: 'Рамён классика', en: 'Classic Ramen' }, category: 'рамен', price: 280, desc: { kg: 'Шампиньоны, половинкой вареного яйца и зеленью в ароматном бульоне.', ru: 'Шампиньоны, половинкой вареного яйца и зеленью в ароматном бульоне.', en: 'Mushrooms, half boiled egg and greens in aromatic broth.' }, img: 'ramen2.PNG' },
             { id: 15, name: { kg: 'Рамён с сыром', ru: 'Рамён с сыром', en: 'Cheese Ramen' }, category: 'рамен', price: 320, desc: { kg: 'Нежный рамён с расплавленным сыром, шампиньонами, половинкой вареного яйца и зеленью.', ru: 'Нежный рамён с расплавленным сыром, шампиньонами, половинкой вареного яйца и зеленью.', en: 'Tender ramen with melted cheese, mushrooms, half boiled egg and greens.' }, img: 'ramen3.PNG' },
             { id: 16, name: { kg: 'Жаренный рамён с сыром', ru: 'Жаренный рамён с сыром', en: 'Fried Ramen with Cheese' }, category: 'рамен', price: 340, desc: { kg: 'Куурулган рамён — кытырак нандын күкүмүндө бышырылган, сыр менен.', ru: 'Жареный рамён в хрустящей панировке с сыром.', en: 'Fried ramen in crispy breading with cheese.' }, img: 'жаренныйраменсссыром.PNG' },
-            { id: 17, name: { kg: 'Жаренный рамён с курицей', ru: 'Жаренный рамён с курицей', en: 'Fried Ramen with Chicken' }, category: 'рамен', price: 400, desc: { kg: 'Куурулган рамён — кытырак нандын күкүмүндө бышырылган, тооп менен.', ru: 'Жареный рамён в хрустящей панировке с курицей.', en: 'Fried ramen in crispy breading with chicken.' }, img: 'жаренныйраменскурецей.PNG' }
+            { id: 17, name: { kg: 'Жаренный рамён с курицей', ru: 'Жаренный рамён с курицей', en: 'Fried Ramen with Chicken' }, category: 'рамен', price: 400, desc: { kg: 'Куурулган рамён — кытырак нандын күкүмүндө бышырылган, тооп менен.', ru: 'Жареный рамён в хрустящей панировке с курицей.', en: 'Fried ramen in crispy breading with chicken.' }, img: 'жаренныйраменскурецей.PNG' },
+            { id: 18, name: { kg: 'Сливочный рамён', ru: 'Сливочный рамён', en: 'Creamy Ramen' }, category: 'рамен', price: 360, desc: { kg: 'Нежный сливочный рамён с курицей, яйцом и зеленью.', ru: 'Нежный сливочный рамён с курицей, яйцом и зеленью.', en: 'Tender creamy ramen with chicken, egg and greens.' }, img: 'сливочныйрамен.PNG' },
+
+            // ЗАПЕЧЕННЫЕ
+            { id: 50, name: { kg: 'Запеченный Ролл Яки', ru: 'Запеченный Ролл Яки', en: 'Baked Yaki Roll' }, category: 'запеченные', price: 269, desc: { kg: 'Бышырылган Яки ролл — соуста бышырылган, нежный жана даамдуу.', ru: 'Запечённый ролл Яки — запечён в соусе, нежный и вкусный.', en: 'Baked Yaki roll — baked in sauce, tender and delicious.' }, img: 'запечролляки.PNG' },
+            { id: 51, name: { kg: 'Запеченный Калифорния', ru: 'Запеченный Калифорния', en: 'Baked California' }, category: 'запеченные', price: 449, desc: { kg: 'Бышырылган Калифорния ролл — классикалык рецепт соуста бышырылган.', ru: 'Запечённый ролл Калифорния — классический рецепт, запечён в соусе.', en: 'Baked California roll — classic recipe baked in sauce.' }, img: 'запечколифорния.PNG' },
+            { id: 52, name: { kg: 'Запеченный с курицей', ru: 'Запеченный с курицей', en: 'Baked Chicken Roll' }, category: 'запеченные', price: 449, desc: { kg: 'Бышырылган тооп менен ролл — соуста бышырылган, даамдуу жана нежный.', ru: 'Запечённый ролл с курицей — запечён в соусе, нежный и сочный.', en: 'Baked chicken roll — baked in sauce, tender and juicy.' }, img: 'запечскур.WEBP' },
+
+            // ТЕМПУРА
+            { id: 60, name: { kg: 'Темпура с курицей', ru: 'Темпура с курицей', en: 'Tempura with Chicken' }, category: 'темпура', price: 399, desc: { kg: 'Темпура ролл тооп менен — кытырак нандын күкүмүндө бышырылган.', ru: 'Ролл темпура с курицей — в хрустящей панировке.', en: 'Tempura roll with chicken — in crispy breading.' }, img: 'тембураскур.PNG' },
+            { id: 61, name: { kg: 'Темпура с крабом', ru: 'Темпура с крабом', en: 'Tempura with Crab' }, category: 'темпура', price: 369, desc: { kg: 'Темпура ролл краб менен — кытырак нандын күкүмүндө бышырылган.', ru: 'Ролл темпура с крабом — в хрустящей панировке.', en: 'Tempura roll with crab — in crispy breading.' }, img: 'тембураскраб.PNG' },
+            { id: 62, name: { kg: 'Темпура с лососем', ru: 'Темпура с лососем', en: 'Tempura with Salmon' }, category: 'темпура', price: 499, desc: { kg: 'Темпура ролл лосось менен — кытырак нандын күкүмүндө бышырылган.', ru: 'Ролл темпура с лососем — в хрустящей панировке.', en: 'Tempura roll with salmon — in crispy breading.' }, img: 'тембурасласос.PNG' },
+
+            // КРЫЛЫШКИ
+            { id: 70, name: { kg: 'Крылышки 30 шт', ru: 'Крылышки 30 шт', en: 'Wings 30 pcs' }, category: 'крылышки', price: 1200, desc: { kg: '30 даана куурулган канаттар — хрустящие и сочные.', ru: '30 штук жареных куриных крылышек — хрустящие и сочные.', en: '30 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
+            { id: 71, name: { kg: 'Крылышки 20 шт', ru: 'Крылышки 20 шт', en: 'Wings 20 pcs' }, category: 'крылышки', price: 899, desc: { kg: '20 даана куурулган канаттар — хрустящие и сочные.', ru: '20 штук жареных куриных крылышек — хрустящие и сочные.', en: '20 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
+            { id: 72, name: { kg: 'Крылышки 10 шт', ru: 'Крылышки 10 шт', en: 'Wings 10 pcs' }, category: 'крылышки', price: 480, desc: { kg: '10 даана куурулган канаттар — хрустящие и сочные.', ru: '10 штук жареных куриных крылышек — хрустящие и сочные.', en: '10 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
+            { id: 73, name: { kg: 'Крылышки 5 шт', ru: 'Крылышки 5 шт', en: 'Wings 5 pcs' }, category: 'крылышки', price: 280, desc: { kg: '5 даана куурулган канаттар — хрустящие и сочные.', ru: '5 штук жареных куриных крылышек — хрустящие и сочные.', en: '5 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' }
         ];
         let cart = [];
         let currentCategory = 'all';
@@ -534,12 +577,24 @@
             }
 
             items.forEach(product => {
+                const priceHTML = product.oldPrice
+                    ? `<div class="flex flex-col">
+                         <span class="text-xs text-slate-400 line-through">${product.oldPrice} сом</span>
+                         <span class="text-lg sm:text-xl font-bold text-brandRed">${product.price} сом</span>
+                       </div>`
+                    : `<span class="text-lg sm:text-xl font-bold text-brandRed">${product.price} сом</span>`;
+
+                const discountBadge = product.oldPrice
+                    ? `<div class="absolute top-2 left-2 bg-brandRed text-white text-xs font-bold px-2 py-1 rounded-lg">СКИДКА</div>`
+                    : '';
+
                 grid.innerHTML += `
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
                         <div>
-                            <div class="w-full bg-white" style="aspect-ratio: 4/3; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                            <div class="w-full bg-white relative" style="aspect-ratio: 4/3; overflow: hidden; display: flex; align-items: center; justify-content: center;">
                                 <img src="${product.img}" alt="${product.name[currentLang]}" 
                                      style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                                ${discountBadge}
                             </div>
                             <div class="p-4 sm:p-5">
                                 <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1">${product.name[currentLang]}</h3>
@@ -547,8 +602,7 @@
                             </div>
                         </div>
                         <div class="p-4 sm:p-5 pt-0 flex justify-between items-center">
-                            <span class="text-lg sm:text-xl font-bold text-brandRed">${product.price} сом</span>
-                            <!-- Кошуу кнопкасы кызыл кылынды (bg-red-600) -->
+                            ${priceHTML}
                             <button onclick="addToCart(${product.id})" class="bg-red-600 text-white px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium hover:bg-red-700 transition shadow-sm">${translations[currentLang].btnAdd}</button>
                         </div>
                     </div>
