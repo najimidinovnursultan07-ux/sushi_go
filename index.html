@@ -258,6 +258,14 @@
                     </div>
                 </div>
 
+                <!-- Информация об оплате -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 text-xs sm:text-sm text-blue-800 space-y-1">
+                    <p class="font-semibold mb-1" id="payment-info-title">💳 Оплата:</p>
+                    <p>✅ <span id="payment-info-prepay">Сумма заказа оплачивается заранее</span></p>
+                    <p id="payment-info-delivery-row">🚗 <span id="payment-info-delivery">Стоимость доставки оплачивается курьеру при получении в заведении</span></p>
+                    <p id="payment-info-pickup-row" class="hidden">🏃 <span id="payment-info-pickup">Самовывоз — забираете в заведении</span></p>
+                </div>
+
                 <div>
                     <label id="label-name" class="block text-sm font-medium text-slate-700 mb-1">Ваше имя:</label>
                     <input type="text" id="client-name" required
@@ -329,13 +337,17 @@
                 cartEmpty: "Корзинаңыз бош",
                 modalTotalText: "Жалпы баасы:",
                 labelDeliveryType: "Алуу ыкмасы:",
-                labelDelivery: "🚗 Доставка",
-                labelPickup: "🏃 Самовывоз",
+                labelDelivery: "🚗 Жеткирүү",
+                labelPickup: "🏃 Өзү алуу",
                 labelName: "Аты-жөнүңүз:",
                 labelPhone: "Телефон номериңиз:",
                 labelAddress: "Жеткирүү дареги:",
-                deliveryWarning: "Бардык доставкалар яндекс аркылуу болот, ценасы ошондо билинет.",
-                btnWhatsapp: "💬 WhatsApp аркылуу заказ кылуу"
+                deliveryWarning: "🚗 Жеткирүү же 🏃 Өзү алуу — экөөнү тең тандасаңыз болот. 💳 Төлөм алдын ала жасалат. 🚗 Жеткирүү учурунда заказдын акчасын алдын ала төлөйсүз, доставканын акчасын курьер келгенде төлөйсүз. 🏃 Өзү алганда — заведениеге барып алынат.",
+                btnWhatsapp: "💬 WhatsApp аркылуу заказ кылуу",
+                paymentTitle: "💳 Төлөм:",
+                paymentPrepay: "Заказдын суммасы алдын ала төлөнөт",
+                paymentDelivery: "Доставканын акчасын курьер келгенде заведениеге төлөйсүз",
+                paymentPickup: "Өзү алуу — заведениеге барып алынат"
             },
             ru: {
                 pageTitle: "Суши — Вкусная доставка",
@@ -373,8 +385,12 @@
                 labelName: "Ваше имя:",
                 labelPhone: "Номер телефона:",
                 labelAddress: "Адрес доставки:",
-                deliveryWarning: "Все доставки осуществляются через Яндекс, стоимость будет известна при оформлении.",
-                btnWhatsapp: "💬 Заказать через WhatsApp"
+                deliveryWarning: "🚗 Доставка или 🏃 Самовывоз — доступны оба варианта. 💳 Оплата заранее (полная сумма). 🚗 При доставке: заказ оплачиваете заранее, доставку оплачиваете курьеру при получении в заведении. 🏃 Самовывоз — забираете в заведении.",
+                btnWhatsapp: "💬 Заказать через WhatsApp",
+                paymentTitle: "💳 Оплата:",
+                paymentPrepay: "Сумма заказа оплачивается заранее",
+                paymentDelivery: "Стоимость доставки оплачивается курьеру при получении в заведении",
+                paymentPickup: "Самовывоз — забираете в заведении"
             },
             en: {
                 pageTitle: "Sushi — Delicious Delivery",
@@ -412,8 +428,12 @@
                 labelName: "Your name:",
                 labelPhone: "Phone number:",
                 labelAddress: "Delivery address:",
-                deliveryWarning: "All deliveries are made via Yandex, the price will be known upon checkout.",
-                btnWhatsapp: "💬 Order via WhatsApp"
+                deliveryWarning: "🚗 Delivery or 🏃 Pickup — both options available. 💳 Payment in advance (full order amount). 🚗 For delivery: pay for the order in advance, delivery cost is paid to the courier at the establishment. 🏃 Pickup — collect at the establishment.",
+                btnWhatsapp: "💬 Order via WhatsApp",
+                paymentTitle: "💳 Payment:",
+                paymentPrepay: "Order amount is paid in advance",
+                paymentDelivery: "Delivery cost is paid to the courier at the establishment",
+                paymentPickup: "Pickup — collect at the establishment"
             }
         };
 
@@ -485,6 +505,10 @@
             document.getElementById('label-address').innerText = t.labelAddress;
             document.getElementById('delivery-warning-text').innerText = t.deliveryWarning;
             document.getElementById('btn-whatsapp').querySelector('span').innerText = t.btnWhatsapp;
+            document.getElementById('payment-info-title').innerText = t.paymentTitle;
+            document.getElementById('payment-info-prepay').innerText = t.paymentPrepay;
+            document.getElementById('payment-info-delivery').innerText = t.paymentDelivery;
+            document.getElementById('payment-info-pickup').innerText = t.paymentPickup;
 
             renderProducts(currentFilteredProducts);
             updateCartUI();
@@ -713,15 +737,20 @@
         function toggleAddress(isDelivery) {
             const addressField = document.getElementById('address-field');
             const addressInput = document.getElementById('client-address');
+            const deliveryRow = document.getElementById('payment-info-delivery-row');
+            const pickupRow = document.getElementById('payment-info-pickup-row');
             if (isDelivery) {
                 addressField.style.display = 'block';
                 addressInput.required = true;
+                deliveryRow.classList.remove('hidden');
+                pickupRow.classList.add('hidden');
             } else {
                 addressField.style.display = 'none';
                 addressInput.required = false;
+                deliveryRow.classList.add('hidden');
+                pickupRow.classList.remove('hidden');
             }
         }
-
         function checkoutWhatsApp(event) {
             event.preventDefault();
 
@@ -741,7 +770,13 @@
             message += `🚚 *Түрү:* ${deliveryType}\n`;
             if (deliveryType === 'Доставка') {
                 message += `📍 *Дарек:* ${address}\n`;
-                message += `ℹ️ *Эскертүү:* Бардык доставкалар яндекс аркылуу болот, баасы ошондо билинет.\n`;
+                message += `\n💳 *Төлөм тартиби:*\n`;
+                message += `— Заказдын суммасы алдын ала төлөнөт\n`;
+                message += `— Доставканын акчасы курьер келгенде төлөнөт\n`;
+            } else {
+                message += `\n💳 *Төлөм тартиби:*\n`;
+                message += `— Заказдын суммасы алдын ала төлөнөт\n`;
+                message += `— Дүкөнгө барганда алынат\n`;
             }
             message += `\n🛒 *Буйрутмалар:*\n`;
 
