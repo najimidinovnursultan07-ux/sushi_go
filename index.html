@@ -126,6 +126,8 @@
                     <option value="сеты" id="opt-cat-sets">Сеты</option>
                     <option value="рамен" id="opt-cat-ramen">Рамен</option>
                     <option value="крылышки" id="opt-cat-wings">Крылышки</option>
+                    <option value="напитки" id="opt-cat-drinks">Напитки</option>
+                    <option value="добавки" id="opt-cat-extras">Добавки</option>
                 </select>
 
                 <div class="hidden md:flex flex-wrap gap-2 justify-center" id="category-buttons">
@@ -147,6 +149,10 @@
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Рамен</button>
                     <button onclick="filterCategory('крылышки')" id="cat-wings"
                         class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Крылышки</button>
+                    <button onclick="filterCategory('напитки')" id="cat-drinks"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Напитки</button>
+                    <button onclick="filterCategory('добавки')" id="cat-extras"
+                        class="cat-btn bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-xl font-medium text-sm hover:bg-slate-100 transition shadow-sm">Добавки</button>
                 </div>
             </div>
 
@@ -323,6 +329,8 @@
                 catBaked: "Бышырылгандар",
                 catTempura: "Темпура",
                 catWings: "Канаттар",
+                catDrinks: "Суусундуктар",
+                catExtras: "Кошумчалар",
                 optSort: "Сорттоо",
                 optCheap: "Арзаныраак",
                 optExpensive: "Кымбатыраак",
@@ -366,6 +374,8 @@
                 catBaked: "Запеченные",
                 catTempura: "Темпура",
                 catWings: "Крылышки",
+                catDrinks: "Напитки",
+                catExtras: "Добавки",
                 optSort: "Сортировка",
                 optCheap: "Сначала дешевле",
                 optExpensive: "Сначала дороже",
@@ -409,6 +419,8 @@
                 catBaked: "Baked",
                 catTempura: "Tempura",
                 catWings: "Wings",
+                catDrinks: "Drinks",
+                catExtras: "Extras",
                 optSort: "Sort by",
                 optCheap: "Cheaper first",
                 optExpensive: "Expensive first",
@@ -470,6 +482,8 @@
             document.getElementById('opt-cat-baked').innerText = t.catBaked;
             document.getElementById('opt-cat-tempura').innerText = t.catTempura;
             document.getElementById('opt-cat-wings').innerText = t.catWings;
+            document.getElementById('opt-cat-drinks').innerText = t.catDrinks;
+            document.getElementById('opt-cat-extras').innerText = t.catExtras;
 
             document.getElementById('cat-all').innerText = t.catAll;
             document.getElementById('cat-combo').innerText = t.catCombo;
@@ -480,6 +494,8 @@
             document.getElementById('cat-baked').innerText = t.catBaked;
             document.getElementById('cat-tempura').innerText = t.catTempura;
             document.getElementById('cat-wings').innerText = t.catWings;
+            document.getElementById('cat-drinks').innerText = t.catDrinks;
+            document.getElementById('cat-extras').innerText = t.catExtras;
 
             document.getElementById('opt-sort').innerText = t.optSort;
             document.getElementById('opt-cheap').innerText = t.optCheap;
@@ -579,7 +595,17 @@
             { id: 70, name: { kg: 'Крылышки 30 шт', ru: 'Крылышки 30 шт', en: 'Wings 30 pcs' }, category: 'крылышки', price: 1200, desc: { kg: '30 даана куурулган канаттар — хрустящие и сочные.', ru: '30 штук жареных куриных крылышек — хрустящие и сочные.', en: '30 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
             { id: 71, name: { kg: 'Крылышки 20 шт', ru: 'Крылышки 20 шт', en: 'Wings 20 pcs' }, category: 'крылышки', price: 899, desc: { kg: '20 даана куурулган канаттар — хрустящие и сочные.', ru: '20 штук жареных куриных крылышек — хрустящие и сочные.', en: '20 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
             { id: 72, name: { kg: 'Крылышки 10 шт', ru: 'Крылышки 10 шт', en: 'Wings 10 pcs' }, category: 'крылышки', price: 480, desc: { kg: '10 даана куурулган канаттар — хрустящие и сочные.', ru: '10 штук жареных куриных крылышек — хрустящие и сочные.', en: '10 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
-            { id: 73, name: { kg: 'Крылышки 5 шт', ru: 'Крылышки 5 шт', en: 'Wings 5 pcs' }, category: 'крылышки', price: 280, desc: { kg: '5 даана куурулган канаттар — хрустящие и сочные.', ru: '5 штук жареных куриных крылышек — хрустящие и сочные.', en: '5 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' }
+            { id: 73, name: { kg: 'Крылышки 5 шт', ru: 'Крылышки 5 шт', en: 'Wings 5 pcs' }, category: 'крылышки', price: 280, desc: { kg: '5 даана куурулган канаттар — хрустящие и сочные.', ru: '5 штук жареных куриных крылышек — хрустящие и сочные.', en: '5 pieces of fried chicken wings — crispy and juicy.' }, img: 'крылишки.PNG' },
+
+            // НАПИТКИ И ДОБАВКИ
+            { id: 90, name: { kg: 'Имбирь', ru: 'Имбирь', en: 'Ginger' }, category: 'добавки', price: 25, desc: { kg: 'Имбирь.', ru: 'Имбирь.', en: 'Ginger.' }, img: 'имбир.PNG' },
+            { id: 91, name: { kg: 'Миринда 1 л', ru: 'Миринда 1 л', en: 'Mirinda 1 L' }, category: 'напитки', price: 130, desc: { kg: 'Миринда, 1 л.', ru: 'Миринда, 1 л.', en: 'Mirinda, 1 L.' }, img: 'мириндв.PNG' },
+            { id: 92, name: { kg: 'Пепси 1 л', ru: 'Пепси 1 л', en: 'Pepsi 1 L' }, category: 'напитки', price: 130, desc: { kg: 'Пепси, 1 л.', ru: 'Пепси, 1 л.', en: 'Pepsi, 1 L.' }, img: 'пепси.PNG' },
+            { id: 93, name: { kg: 'Пепси 0,5 л', ru: 'Пепси 0,5 л', en: 'Pepsi 0.5 L' }, category: 'напитки', price: 80, desc: { kg: 'Пепси, 0,5 л.', ru: 'Пепси, 0,5 л.', en: 'Pepsi, 0.5 L.' }, img: 'пепси.PNG' },
+            { id: 94, name: { kg: 'Сырный соус', ru: 'Сырный соус', en: 'Cheese Sauce' }, category: 'добавки', price: 20, desc: { kg: 'Сырный соус, 1 порция.', ru: 'Сырный соус, 1 порция.', en: 'Cheese sauce, 1 serving.' }, img: 'сырныйсоус.PNG' },
+            { id: 95, name: { kg: 'Чесночный соус', ru: 'Чесночный соус', en: 'Garlic Sauce' }, category: 'добавки', price: 20, desc: { kg: 'Чесночный соус, 1 порция.', ru: 'Чесночный соус, 1 порция.', en: 'Garlic sauce, 1 serving.' }, img: 'чесночныйсоус.PNG' },
+            { id: 96, name: { kg: 'Соевый соус', ru: 'Соевый соус', en: 'Soy Sauce' }, category: 'добавки', price: 20, desc: { kg: 'Соевый соус, 1 порция.', ru: 'Соевый соус, 1 порция.', en: 'Soy sauce, 1 serving.' }, img: 'соевыйсоус.PNG' },
+            { id: 97, name: { kg: 'Васаби', ru: 'Васаби', en: 'Wasabi' }, category: 'добавки', price: 20, desc: { kg: 'Васаби, 1 порция.', ru: 'Васаби, 1 порция.', en: 'Wasabi, 1 serving.' }, img: 'васаби.PNG' }
         ];
         let cart = [];
         let currentCategory = 'all';
